@@ -32,6 +32,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build project
         run: |
+          echo $(pwd)
+          chmod 777 $(pwd)/micro_ros_stm32cubemx_utils/microros_static_library/library_generation/library_generation.sh
+          chmod u+x $(pwd)/micro_ros_stm32cubemx_utils/microros_static_library/library_generation/library_generation.sh
           docker run --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=micro_ros_stm32cubemx_utils/microros_static_library microros/micro_ros_static_library_builder:iron
       
       - name: Pack library
