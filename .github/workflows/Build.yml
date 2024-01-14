@@ -32,7 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build project
         run: |
-          docker run -it --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=micro_ros_stm32cubemx_utils/microros_static_library microros/micro_ros_static_library_builder:iron
+          docker run --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=micro_ros_stm32cubemx_utils/microros_static_library microros/micro_ros_static_library_builder:iron
       
       - name: Pack library
         run: tar -zcvf micro_ros_stm32cubemx_utils_build.tar.gz micro_ros_stm32cubemx_utils
