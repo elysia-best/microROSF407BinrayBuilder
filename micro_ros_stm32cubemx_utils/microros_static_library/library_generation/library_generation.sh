@@ -51,7 +51,7 @@ if [ $RET_CODE = "0" ]; then
     echo "-------------"
     echo $RET_CFLAGS
     echo "-------------"
-    read -p "Do you want to continue with them? (y/n)" -n 1 -r
+    # read -p "Do you want to continue with them? (y/n)" -n 1 -r
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
