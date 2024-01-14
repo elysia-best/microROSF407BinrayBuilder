@@ -57,8 +57,8 @@ if [ $RET_CODE = "0" ]; then
     then
         echo "Continuing..."
     else
-        echo "Aborting"
-        exit 0;
+        # echo "Aborting"
+        # exit 0;
     fi
 else
     echo "Please read README.md to update your Makefile"
