@@ -57,7 +57,7 @@ if [ $RET_CODE = "0" ]; then
     then
         echo "Continuing..."
     else
-        # echo "Aborting"
+        echo "Aborting";
         # exit 0;
     fi
 else
