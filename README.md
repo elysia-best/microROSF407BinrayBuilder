@@ -152,13 +152,27 @@ fi
 
 ### 3. 将代码推送到 `GitHub`
 
-## 4. 开始编译
+## 4. 配置权限&开始编译
 
-前往你的仓库的 `Actions` 页面，点击 左边的 `CI` 按钮，再点击右边的 `Run worlflow` 就可以开始编译了！。
+### 1. 配置权限
 
-![Run worlflow](./.imgs/image.png)
+Github 默认是不允许在Actions中读写仓库的，我们需要先配置一下权限，让它可以上传Release。
 
-编译完成后的结果，可以在仓库的 `Release` 页面直接下载。
+1. 首先前往 Settings 界面
 
-![Release](./.imgs/屏幕截图%202024-01-21%20125412.png)
+    ![Alt text](./.imgs/image1.png)
+
+2. 然后，前往 Actions -> General
+    ![Alt text](./.imgs/image2.png)
+
+3. 在页面下方，选择 `Read and write permissions` 选项
+    ![Alt text](./.imgs/image3.png)
+
+4. 前往你的仓库的 `Actions` 页面，点击 左边的 `CI` 按钮，再点击右边的 `Run worlflow` 就可以开始编译了！。
+
+    ![Run worlflow](./.imgs/image.png)
+
+5. 编译完成后的结果，可以在仓库的 `Release` 页面直接下载。
+
+    ![Release](./.imgs/屏幕截图%202024-01-21%20125412.png)
 
