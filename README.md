@@ -168,11 +168,13 @@ Github 默认是不允许在Actions中读写仓库的，我们需要先配置一
 3. 在页面下方，选择 `Read and write permissions` 选项
     ![Alt text](./.imgs/image3.png)
 
-4. 前往你的仓库的 `Actions` 页面，点击 左边的 `CI` 按钮，再点击右边的 `Run worlflow` 就可以开始编译了！。
+### 2. 开始编译
+
+1. 前往你的仓库的 `Actions` 页面，点击 左边的 `CI` 按钮，再点击右边的 `Run worlflow` 就可以开始编译了！。
 
     ![Run worlflow](./.imgs/image.png)
 
-5. 编译完成后的结果，可以在仓库的 `Release` 页面直接下载。
+2. 编译完成后的结果，可以在仓库的 `Release` 页面直接下载。
 
     ![Release](./.imgs/屏幕截图%202024-01-21%20125412.png)
 
