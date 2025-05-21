@@ -30,14 +30,11 @@ jobs:
           chmod 777 $(pwd)/micro_ros_stm32cubemx_utils/microros_static_library/library_generation/library_generation.sh
           chmod u+x $(pwd)/micro_ros_stm32cubemx_utils/microros_static_library/library_generation/library_generation.sh
           docker run --rm -v $(pwd):/project --env MICROROS_LIBRARY_FOLDER=micro_ros_stm32cubemx_utils/microros_static_library microros/micro_ros_static_library_builder:iron
-      
-      - name: Pack library
-        run: tar -zcvf micro_ros_stm32cubemx_utils_build.tar.gz micro_ros_stm32cubemx_utils
 
-      - uses: ncipollo/release-action@v1
+      - name: Artifact
+        uses: actions/upload-artifact@v4
         with:
-          tag: "AutoBuild"
-          prerelease: true
-          allowUpdates: true
-          artifacts: "micro_ros_stm32cubemx_utils_build.tar.gz"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          name: "micro_ros_stm32cubemx_utils_build"
+          path: ${{ github.workspace }}/micro_ros_stm32cubemx_utils
+          compression-level: 0
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
